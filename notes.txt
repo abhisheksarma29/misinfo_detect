@@ -1,0 +1,3 @@
+23/10
+moved static folder outside with level of searchengine
+static cdn came in C 
