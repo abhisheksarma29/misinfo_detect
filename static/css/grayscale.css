@@ -39,7 +39,7 @@ p {
   }
 }
 a {
-  color: #42DCA3;
+  color: #336600;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -47,7 +47,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #1d9b6c;
+  color: #006400;
 }
 .light {
   font-weight: 400;
@@ -124,8 +124,8 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-  background-color: black;
+  /*background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;*/
+  background-color: #202020;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -220,12 +220,26 @@ a:focus {
 .content-section {
   padding-top: 100px;
 }
-.download-section {
+.results-section {
+  width: 100%;
+  padding: 50px 0;
+  color: black;
+  /*background: url(../img/downloads-bg.jpg) no-repeat center center scroll;*/
+  background-color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.results-section a {
+	font-weight:bold;
+}
+.rate-section {
   width: 100%;
   padding: 50px 0;
   color: white;
-  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-  background-color: black;
+  /*background: url(../img/downloads-bg.jpg) no-repeat center center scroll;*/
+  background-color: #202020;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -289,7 +303,7 @@ ul.banner-social-buttons {
 }
 footer {
   padding: 50px 0;
-}
+  background-color:#202020;
 footer p {
   margin: 0;
 }

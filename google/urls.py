@@ -22,6 +22,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^searchengine/', include('searchengine.urls')),
+    url(r'^searchengine/query/', include('searchengine.urls')),
+    url(r'^searchengine/searchradio/', include('searchengine.urls')),
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -12,10 +12,19 @@ my_cse_id = "012714669292352524483:jg2mcvgqwfy"
 
 
 def google_search(search_term, api_key, cse_id, **kwargs):
-    service = build("customsearch", "v1", developerKey=api_key)
-    res = service.cse().list(q=search_term, cx=cse_id, **kwargs).execute()
-    #pdb.set_trace()
-    return res['items']
+	service = build("customsearch", "v1", developerKey=api_key)
+	res = service.cse().list(q=search_term, cx=cse_id, **kwargs).execute()
+	#pdb.set_trace()
+	res_filter=res['items']
+	result_data=[]
+	words=['Reviews','comments','answers','Answers']
+	for res_data in res_filter:
+		if all(member not in res_data['snippet'] for member in words):
+			if all(member not in res_data['formattedUrl'] for member in words):
+			
+				result_data.append(res_data)
+	return result_data
+	#return res['items']
 
 #results = google_search(
     #'stackoverflow site:en.wikipedia.org'
