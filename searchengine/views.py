@@ -17,11 +17,11 @@ def search(request):
     
     if request.POST:
 	#pdb.set_trace()
-	return render_to_response('search.html', {'result': google_search(request.POST['term'],my_api_key,my_cse_id,num=10 ),'a':request.POST['term']})
+		return render_to_response('search.html', {'result': google_search(request.POST['term'],my_api_key,my_cse_id,num=10 ),'a':request.POST['term']})
 	#return HttpResponseRedirect("/")
     else:
 	#pdb.set_trace()
-	return render_to_response ('search.html')
+		return render_to_response ('search.html')
 
 @csrf_exempt
 def searchradio(request):
