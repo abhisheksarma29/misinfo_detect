@@ -16,7 +16,7 @@ def search(request):
 	if request.POST:
 	#pdb.set_trace()\
 		return render_to_response('search.html', {'result': google_search(request.POST['term'],my_api_key,my_cse_id,num=10 ),'a':request.POST['term']})
-        else:
+	else:
 	#pdb.set_trace()
 		return render_to_response ('search.html')
 
@@ -30,5 +30,5 @@ def searchradio(request):
     #DCG=float(val1)+float(val2)+float(val3)
 
 
-    	DCG=(float(val1)+float(val2)/math.log(2)+float(val3)/math.log(3))/(float(3)+float(3)/math.log(2)+float(3)/math.log(3))
-    	return HttpResponse("Utility: %s" %DCG)
+    DCG=(float(val1)+float(val2)/math.log(2)+float(val3)/math.log(3))/(float(3)+float(3)/math.log(2)+float(3)/math.log(3))
+    return HttpResponse("Utility: %s" %DCG)
