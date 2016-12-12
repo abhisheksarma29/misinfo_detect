@@ -11,7 +11,7 @@ import math
 @csrf_exempt
 def search(request):
 	my_api_key = "AIzaSyCfXfB3DUeVWwFpFFqIcliJslJ-qfRJtF8"
-    	my_cse_id = "012714669292352524483:jg2mcvgqwfy"
+    my_cse_id = "012714669292352524483:jg2mcvgqwfy"
 
 	if request.POST:
 	#pdb.set_trace()\
